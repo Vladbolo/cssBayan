@@ -1,8 +1,6 @@
 body {
-    color: #2c3e50;
-    background: #ecf0f1;
+    color: #139bd1;
   }
-
   .half {
     margin: 0 auto;
     width: 50%;
@@ -13,9 +11,9 @@ body {
     position: relative;
     margin-bottom: 1rem;
     width: 100%;
-    color: #fff;
     overflow: hidden;
   }
+
   .tab input {
     position: absolute;
     opacity: 0;
@@ -24,13 +22,11 @@ body {
   .tab label {
     position: relative;
     display: block;
-    padding: 0 0 0 1em;
-    background: #16a085;
+    padding: 0 0 0 0.5em;
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
   }
-
 
   img {
     display: block;
@@ -52,14 +48,16 @@ body {
   .tab input:checked ~ .tab-content {
     max-height: 100vh;
   }
+
+  .tab input:hover ~ .tab-content {
+    max-height: 100vh;
+  }
   /* Icon */
   .tab label::after {
     position: absolute;
     right: 0;
     top: 0;
     display: block;
-    width: 3em;
-    height: 3em;
     line-height: 3;
     text-align: center;
     -webkit-transition: all .35s;
@@ -68,8 +66,30 @@ body {
   }
   .tab input[type=radio] + label::after {
     content: "+";
+    display: none;
   }
+
   .tab input[type=radio]:checked + label::after {
-    transform: rotate(315deg);
+    color: #2c3e50;
+  }
+
+  .tab input[type=radio]:checked + label {
+    color: #2c3e50;
+  }
+
+  .half:hover .tab input[type=radio] + label::after {
+    display: block;
+    color: #2c3e50;
+  }
+
+  .half:hover .tab input[type=radio] + label {
+    color: #2c3e50;
+  }
+  .tab input[type=radio]:hover + label::after {
+    transform: rotate(45deg);
+  }
+
+  .tab input[type=radio]:checked + label::after {
+    transform: rotate(45deg);
   }
   
