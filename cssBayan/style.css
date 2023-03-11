@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     width: 50%;
     padding: 0 1em;
+    cursor: pointer;
   }
   /* Acordeon styles */
   .tab {
@@ -103,6 +104,14 @@ body {
         font-size: 70%;
     }
     label {
-        font-size: 70%;
+        font-size: 61%;
+    }
+
+    .tab {
+        margin-bottom: 0.5em;
+    }
+
+    img {
+        margin: 0.5em auto;
     }
   }
