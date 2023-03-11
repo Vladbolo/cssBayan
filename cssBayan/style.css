@@ -93,3 +93,11 @@ body {
     transform: rotate(45deg);
   }
   
+  @media  screen and (max-width: 800px) {
+    h1 {
+        font-size: 70%;
+    }
+    label {
+        font-size: 70%;
+    }
+  }
